@@ -1,0 +1,108 @@
+
+ASUS Zenbook UX310UA-FC341T gold (90NB0CJ-M05320)
+https://www.heise.de/preisvergleich/asus-zenbook-ux310ua-fc341t-gold-90nb0cj-m05320-a1513984.html
+ASUS ZenBook UX310UA
+https://www.asus.com/Notebooks/ASUS-ZenBook-UX310UA/
+
+Meine Tochter hat sich beschwert, dass der Lüfter nervt...
+
+Wie andere auch schon festgestellt haben ist die LüfterSteuerung ziemlicher Mist.
+...aber nicht erst seit dieser Generation!
+( https://www.computerbase.de/forum/showthread.php?t=1132857 )
+
+SpeedFan 4.52 habe ich vergeblich getestet und dem Entwickler einen Report geschickt.
+Ob es Unterstützung hierfür geben wird, ist unklar und wenn, kann es dauern.
+
+In 'NoteBook FanControl (NBFC) 1.5.2.0' ( https://github.com/hirschmann/nbfc/ ) ist eine Config für das 'ASUS Zenbook Flip UX360UAK' enthalten, welches den gleichen Prozessor enthält.
+- Nach der Installation von NBFC startet man erst den 'Config Editor'
+> Import > [...\NoteBook FanControl\Configs] > 'Asus Zenbook Flip UX360UAK.xml' > [Öffnen]
+...und ändert den Namen in 'Asus Zenbook UX310UAK' [OK]
+- Danach Startet man 'NoteBook FanControl' > [...] > 'Select Config' >
+...wählt dort das eben kopierte/erstellte Profil aus und bestätigt mit [Apply]
+- Ein Klick auf '•Enabled' aktiviert das Profil umgehend.
+Es funktioniert schon recht ordentlich *.
+Thx @ xant1 + jws
+- Wer möchte, kann über das Zahnrad ein Tray-Info-Symbol starten lassen.
+
+*) YouTube-HD-1080x60-FullScreen ... wenn nix anderes nebenher läuft, ist Ruhe, meistens...
+Lüfter schaltet sich bei 65°C mit 25% (~90 sec) ein und bei 50°C wieder aus (~150 sec),
+d.h. bei normaler Arbeit sollte der fast nie anspringen,
+...sofern Windows nicht wieder irgend etwas im Hintergrund fummeln muss.
+
+Bei einem Notebook der 300/400,-- € Klasse wäre so etwas ebenfalls ärgerlich,
+bei dieser Klasse aber ein absolutes NoGo!
+Warum Asus das nicht auf die Reihe bekommt, ist mir ein Rätsel.
+
+----------
+'NoteBook FanControl (NBFC) 1.5.2.0'
+Was + wie geht denn da so alles?
+-----
+
+Offensichtlich lässt sich der Lüfter in 8 Stufen ansteuern.
+Hier die manuell per CLI getesteten LüfterDrehZahlen [rpm] (Toleranz, geschätzt):
+012,5	3020 ±20
+025,0	3420 ±20
+037,5	3820 ±20
+050,0	4210 ±20
+062,5	4680 ±20
+075,0	4980 ±20
+087,5	5300 ±20
+100,0	5500 ±20
+-----
+
+Ganz habe ich das noch nicht verstanden,
+aber daraus lässt sich das Profil vom UX360UAK noch etwas verfeinern.
+'Temperature thresholds'
+'Up threshold'	'Down threshold'	'Fan speed'
+50°C	 0°C	  0.0%
+65°C	50°C	 12.5%
+70°C	60°C	 25.0%
+75°C	65°C	 50.0%
+77°C	67°C	 75.0%
+80°C	70°C	100.0%
+-----
+
+Test (ZimmerTemperatur ~24°C)
+Basis		ruhender Dektop, AC-Power
+CPU-Last	0...3%
+PCH-Temp	29°C
+CPU-Temp	32°C
+SSD-Temp	26°C
+Lüfter		0%
+Zeit		>20 min.
+
+System Stability Test -	Aida64: CPU,FPU,Cache,RAM,GPU --> 100%
+Mit dem angepassten Profil 'Asus Zenbook UX310UAK' (Enabled, Auto):
+CPU-Last	100%
+Lüfter		50.0%
+Drehzahl	4200
+Temperatur	73°C
+Dauer		>10 min.
+Bemerkung:
+Kurzes überschwingen auf 80°C + 100% Lüfter <50 sec.
+Schneller Rückgang auf ~65°C + 25% Lüfter > 60 sec.
+Nach 10 min.	CPU: ~69°C + 25% Lüfter	(PCH: 56°C / SSD: 30°C)
+Nach 20 min.	CPU: ~69°C + 25% Lüfter	(PCH: 58°C / SSD: 31°C)
+Nach 35 min.	CPU: <70°C + 25% Lüfter	(PCH: 59°C / SSD: 32°C)
++ 'Strss local Disks'
+Nach 45 min.	CPU: <70°C + 25% Lüfter	(PCH: 59°C / SSD: 40°C)
+... Lüfter manuell auf 50% (Ist schon als laut zu bezeichnen!)
+Nach 55 min.	CPU: ~66°C + 50% Lüfter	(PCH: 56°C / SSD: 41°C)
+... Stress: Ende, NBFC: Auto
+Nach 57 min.	CPU: ~49°C + 0% Lüfter	(PCH: 45°C / SSD: 34°C)
+-----
+
+Fazit
+Test bestanden.
+Mit NBFC existiert eine gutes, einfaches Tool,
+mit dem sich das 'Asus Zenbook UX310UAK'
+von einer Nervensäge in ein schickes Arbeitsgerät verwandeln lässt.
+Wie sich das im Sommer bei schnuckeligen 30°C verhält, wird sich zeigen...
+-----
+
+Sollte es weitere Verbesserungen geben, oder sich, wai. ein Fehler eingeschlichen haben,
+bitte ich Euch, mich |+ Stefan Hirschmann zu kontaktieren.
+
+-- 
+Viel Spaß mit dem UX310UAK + NBFC
+fredo
