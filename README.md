@@ -8,7 +8,7 @@ Mit Win-Batch bastel ich schon sehr lange, seit Win8 ist auch die PowerShell hin
 Bei [heise/ct](https://www.heise.de/ct/) bin ich in einigen Foren aktiv (s.u.)
 und werde dadurch mit diversen Herausforderungen konfrontiert, dessen Lösung und Verbesserung _mir_ natürlich ebenfalls _nützlich sind_. ;-)
 
-Btw, so ganz habe ich GitHub noch nicht verstanden, man möge es mit verzeihen ¿
+Btw, so ganz habe ich GitHub noch nicht verstanden, man möge es mir verzeihen ¿
 
 --
 
