@@ -13,7 +13,7 @@ Btw, so ganz habe ich GitHub noch nicht verstanden, man möge es mir verzeihen �
 --
 
 ### Hobby #1
-Ich liebe meine **[Husqvarna Nuda 900 R](http://www.husqvarna-motorrad.de/index.php?id=726&no_cache=1&modelId=101)** seit 2012-05-08 & ~42433 km. Für meine Diva bin ich () im deutschen **[Husqvarna-Forum](http://www.husqvarna-forum.de/viewforum.php?f=27&sid=b0bacba08a9a396434daa459db5f78b2)** recht aktiv.
+Ich liebe meine **[Husqvarna Nuda 900 R](http://www.husqvarna-motorrad.de/index.php?id=726&no_cache=1&modelId=101)** seit 2012-05-08 & ~42433 km. Für meine Diva bin ich im deutschen **[Husqvarna-Forum](http://www.husqvarna-forum.de/viewforum.php?f=27&sid=b0bacba08a9a396434daa459db5f78b2)** recht aktiv.
 
 ![F0117375/fredo](http://www.husqvarna-forum.de/download/file.php?avatar=11158_1458916463.gif "F0117375/fredo@Husqvarna-Forum")
 ![Husqvarna Nuda 900 R](http://www.husqvarna-motorrad.de/uploads/tx_userzupinhusqvarnamodels/nuda900r_02.jpg "Husqvarna Nuda 900 R")
